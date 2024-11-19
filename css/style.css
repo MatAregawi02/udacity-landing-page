@@ -1,0 +1,202 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-size: 1.4rem;
+    color: white;
+  }
+  
+  header {
+    max-width: 90%;
+    margin: 0 auto;
+    position : sticky;
+    top : 0;
+    color: black;
+    border: 1px solid black;
+    
+  }
+ 
+  .menu {
+   
+    display: flex;
+    justify-content: flex-end;
+    /* gap: 1rem; */
+    list-style: none;
+   
+    /* right : 5%; */
+    background-color: white;
+  }
+  li:hover{
+    background-color: black;
+    
+  }
+  
+  li {
+    border-right: 1px solid black;
+    padding: 1rem;
+  }
+  a{
+    /* background-color: yellow; */
+    padding : 2rem; /* padding added */
+  }
+ 
+  
+  
+  .hero {
+    max-width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    background: rgb(136, 203, 171);
+    background: linear-gradient(0deg, rgb(136, 203, 171) 0%, rgb(0, 13, 60) 100%);
+    padding: 10rem;
+  }
+  .hero h1 {
+    font-size: 5rem;
+  }
+
+  section {
+    max-width: 90%;
+    margin: 0 auto;
+    background: rgb(136, 203, 171);
+    background: linear-gradient(0deg, rgb(136, 203, 171) 0%, rgb(0, 13, 60) 100%);
+    padding: 1rem;
+    height: 100vh;
+    
+  }
+  .active-section {
+    color : white;
+  }
+  .wrapper-1,.wrapper-3{
+  
+    width : 70%;
+    padding : 2rem;
+    
+  }
+  .wrapper-2,.wrapper-4{
+   
+    width : 70%;
+    padding : 2rem;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+  
+  }
+  p{
+    font-size: 2rem;
+  }
+  /* .section-1,.section-3{
+    
+  }
+  .section-2,.section-4{
+   
+ 
+  } */
+  h2 {
+    font-size: 3rem;
+    border-bottom: 1px solid gold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  /* .active{
+    background-color: black;
+    color : white;
+} */
+
+/*media queries*/
+@media (max-width : 1861px) {
+ 
+  p{
+    font-size: 1.6rem;
+  }
+}
+@media (max-width : 1300px){
+  p{
+    font-size: 1.4rem;
+  }
+}
+@media (max-width : 1012px){
+   p{
+    font-size: 1.2rem;
+   }
+}
+@media (max-width : 974px){
+  .wrapper-1,.wrapper-3{
+  
+    width : 100%;
+    padding : 1rem;
+    
+  }
+  .wrapper-2,.wrapper-4{
+   
+    width : 100%;
+    padding : 1rem;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  
+  }
+  p{
+    font-size: 1.1rem;
+  }
+}
+@media (max-width : 652px){
+  .menu{
+    /* background-color: yellow; */
+    flex-wrap: wrap;
+  }
+  .hero h1{
+    
+    font-size: 3rem;
+   
+  }
+}
+@media (max-width : 610px){
+  h2{
+    font-size: 1.6rem;
+  }
+ 
+  .hero h1{
+    
+    font-size: 2rem;
+  
+   
+  }
+  .section{
+    height : 150%; /*at some point, the height needs to get flexible*/
+  }
+  p{
+    font-size: 0.4rem;
+  }
+}
+@media (max-width : 488px){
+  .hero{
+    padding : 3rem;
+  }
+  
+  h2{
+    font-size: 1.5rem;
+  }
+  p{
+    font-size: 0.9rem;
+  }
+}
+@media (max-height : 600px){ /*special case for nest devices*/
+  p{
+    font-size: 1.2rem;
+  }
+}
+  
+
+
+
+
+ 
+
+

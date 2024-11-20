@@ -30,7 +30,7 @@ for (const sectionItem of Object.entries(contentObj)){
 }
 document.querySelector(".main-content").innerHTML = sec;
 
-var links = document.querySelectorAll(".link");
+let links = document.querySelectorAll(".link");
 
 
 links.forEach(function(link){
@@ -57,18 +57,46 @@ links.forEach(function(link){
         )
     })
 })
-// solution implementation using an intersection observer API
+
+
+
+
+// let navLinkArray = Object.keys(contentObj);
+// console.log(navLinkArray);
+
 const targets = document.querySelectorAll(".section");
+
+
+// solution implementation using an intersection observer API
 //targets is a nodeList which can be accessesd using index
 //let's define a callback function
+
 const callback = (entries,observer) => {
     entries.forEach((entry,index) => {
+        let i = 0;
         if (entry.isIntersecting){
-
+           
             entry.target.classList.add("active-section");
-            console.log("Current section has entered the scence.");
+            links.forEach((link) => {
+                //if the link and the section have the same title, highlight
+                if (entry.target.querySelector("h2").textContent === link.id){
+                // link.style.backgroundColor = "black";
+                link.classList.add("active");
+                
+                }
+                else{
+                    link.classList.remove("active");
+                    // link.style.backgroundColor = "white";
+                }
+                
+                // let myId = link.id;
+                // console.log(myId);
+            })
+            // console.log("Current section has entered the scence.");
+       
         }
         else{
+           
             entry.target.classList.remove("active-section");
         }
     });

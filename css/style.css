@@ -46,7 +46,10 @@ html {
     /* background-color: yellow; */
     padding : 2rem; /* padding added */
   }
- 
+ .active{
+  background-color: black;
+  color : white;
+ }
   
   
   .hero {
